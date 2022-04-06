@@ -20,7 +20,6 @@ namespace HudlCoding
         public void Setup()
         {
             driver = new ChromeDriver(Environment.CurrentDirectory);
-            //driver = new ChromeDriver("C:\\Users\\Tyler\\source\\repos\\HudlCoding\\Drivers");
             driver.Manage().Window.Maximize();
             
         }

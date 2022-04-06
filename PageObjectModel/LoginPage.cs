@@ -13,7 +13,7 @@ namespace HudlCoding.PageObjectModel
     {
         public IWebDriver driver;
         public string email = "Trentz2016@gmail.com";
-        public string password = "538Plate";
+        public string password = "Apple2020";
         public string badEmail = "Hello@test.com";
         public string badPwd = "ansfaief";
         public string sqlInj = "SELECT * FROM Emails";

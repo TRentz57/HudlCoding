@@ -1,22 +1,24 @@
-﻿using NUnit.Framework;
+﻿using Microsoft.Extensions.Configuration;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace HudlCoding.PageObjectModel
 {
-    public class LoginPage
+    public class LoginPage : Controller
     {
+       
         public IWebDriver driver;
-        public string email = "Trentz2016@gmail.com";
-        public string password = "Apple2020";
+        //Add your email here
+        public string email = "";
+        //Add your password here
+        public string password = "";
         public string badEmail = "Hello@test.com";
         public string badPwd = "ansfaief";
         public string sqlInj = "SELECT * FROM Emails";
+        
 
         public LoginPage(IWebDriver driver)
         {
@@ -48,8 +50,10 @@ namespace HudlCoding.PageObjectModel
         }
         public void EnterEmail()
         {
-
-            EmailField.SendKeys(email);
+          
+           
+            EmailField.SendKeys(email); 
+         
            
         }
         public void EnterPassword()
